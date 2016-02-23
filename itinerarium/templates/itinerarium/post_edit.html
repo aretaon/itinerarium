@@ -1,0 +1,17 @@
+{% extends 'itinerarium/base.html' %}
+{% load widget_tweaks %} <!-- ermöglicht das setzen von Klassen in Formualren -->
+
+
+{% block content %}
+    <h1>New post</h1>
+    <form method="POST" class="post-form">
+      {% csrf_token %} <!-- Wichtig fuer die Sicherheit des Formulars! -->
+      {% for field in form %}
+        <div class="form-group">
+          <label class="mylabel">{{ field.label }}</label>
+            {{ field|add_class:"form-control" }}
+        </div>
+      {% endfor %}
+      <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+{% endblock %}

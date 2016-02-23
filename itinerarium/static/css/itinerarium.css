@@ -1,0 +1,21 @@
+.comment {
+    margin: 20px 0 20px 20px;
+}
+
+a:focus {
+   outline: none;
+}
+
+.box-shadow(@shadow: 0 1px 3px rgba(0,0,0,.25)) {
+  -webkit-box-shadow: @shadow; // iOS <4.3 & Android <4.1
+          box-shadow: @shadow;
+}
+
+.date {
+    float: right;
+    color: #828282;
+}
+
+.content{
+    margin-top: 70px;
+}
