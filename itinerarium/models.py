@@ -10,6 +10,7 @@ class Post(models.Model):
             default=timezone.now)
     published_date = models.DateTimeField(
             blank=True, null=True)
+    background = models.ImageField(upload_to='backgrounds', null=True) #null=True avoids the database questioning for the content of the field
 
     def publish(self):
         self.published_date = timezone.now()
