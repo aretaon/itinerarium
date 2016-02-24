@@ -1,1 +1,0 @@
-C:\Python27_64\Scripts\pyinstaller.exe GUniDec.spec --noconfirm
