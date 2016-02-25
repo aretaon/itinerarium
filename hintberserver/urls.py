@@ -16,9 +16,13 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 admin.autodiscover()
+from django.contrib.auth import views
+from django.conf.urls.static import static
+from django.conf import settings
+
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^', include('itinerarium.urls')),
-    url(r'^accounts/login/$', 'django.contrib.auth.views.login'),
-]
+    url(r'^accounts/login/$', views.login),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

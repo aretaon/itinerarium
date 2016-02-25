@@ -4,7 +4,7 @@
 
 {% block content %}
     <h1>New post</h1>
-    <form method="POST" class="post-form">
+    <form method="POST" enctype="multipart/form-data" class="post-form">
       {% csrf_token %} <!-- Wichtig fuer die Sicherheit des Formulars! -->
       {% for field in form %}
         <div class="form-group">
